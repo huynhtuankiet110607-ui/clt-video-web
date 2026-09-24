@@ -12,7 +12,7 @@
 
     <link
         rel="stylesheet"
-        href="{{ url_for('static', path='/css/style.css') }}"
+        href="{{ url_for('static', path='/css/style.css') }}?v=2"
     >
 </head>
 
@@ -33,6 +33,9 @@
                 controls
                 playsinline
                 preload="metadata"
+                poster="{{ url_for('static', path='/video/clt_poster.jpg') }}"
+                width="1280"
+                height="720"
                 aria-label="Video mô phỏng định lý giới hạn trung tâm"
             >
                 <source
@@ -41,6 +44,11 @@
                 >
                 Trình duyệt của bạn không hỗ trợ video HTML5.
             </video>
+            <p class="video-note">
+                Nhấn ▶ để xem mô phỏng 30 giây, không có âm thanh.
+                Cỡ mẫu n tăng từ 1 đến 100, mỗi cỡ mẫu được lặp 5.000 lần.
+                <a href="{{ url_for('static', path='/video/clt_simulation.mp4') }}" download>Tải video MP4</a>.
+            </p>
         </section>
 
         <aside class="card">
@@ -48,8 +56,8 @@
 
             <ol>
                 <li>So sánh các kích thước mẫu n.</li>
-                <li>Quan sát histogram của trung bình mẫu.</li>
-                <li>Đánh giá xu hướng tiến về dạng chuông.</li>
+                <li>Quan sát histogram của trung bình mẫu đã chuẩn hóa Z = √n (X̄ − μ) / σ.</li>
+                <li>So sánh với đường cong chuẩn: dù phân phối gốc lệch phải, histogram dần gần dạng chuông khi n tăng.</li>
             </ol>
         </aside>
     </main>
