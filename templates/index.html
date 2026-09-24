@@ -1,18 +1,57 @@
 <!doctype html>
 <html lang="vi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Mo phong dinh li gioi han trung tam">
-<title>Mo phong CLT</title>
-<link rel="stylesheet"
-href="{{ url_for(’static’, path=’/css/style.css’) }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+        name="description"
+        content="Mô phỏng định lý giới hạn trung tâm"
+    >
+
+    <title>Mô phỏng CLT</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', path='/css/style.css') }}"
+    >
 </head>
+
 <body>
-<header class="hero">
-<div class="container">
-<p class="eyebrow">LAP TRINH PYTHON NANG CAO</p>
-<h1>Dinh li Gioi han Trung tam</h1>
-<p>Quan sat phan phoi cua trung binh mau khi n tang.</p>
-</div>
-</header>
+    <header class="hero">
+        <div class="container">
+            <p class="eyebrow">LẬP TRÌNH PYTHON NÂNG CAO</p>
+            <h1>Định lý Giới hạn Trung tâm</h1>
+            <p>Quan sát phân phối của trung bình mẫu khi n tăng.</p>
+        </div>
+    </header>
+
+    <main class="container grid">
+        <section class="card video-card">
+            <h2>Video mô phỏng</h2>
+
+            <video
+                controls
+                playsinline
+                preload="metadata"
+                aria-label="Video mô phỏng định lý giới hạn trung tâm"
+            >
+                <source
+                    src="{{ url_for('static', path='/video/clt_simulation.mp4') }}"
+                    type="video/mp4"
+                >
+                Trình duyệt của bạn không hỗ trợ video HTML5.
+            </video>
+        </section>
+
+        <aside class="card">
+            <h2>Cách quan sát</h2>
+
+            <ol>
+                <li>So sánh các kích thước mẫu n.</li>
+                <li>Quan sát histogram của trung bình mẫu.</li>
+                <li>Đánh giá xu hướng tiến về dạng chuông.</li>
+            </ol>
+        </aside>
+    </main>
+</body>
+</html>
